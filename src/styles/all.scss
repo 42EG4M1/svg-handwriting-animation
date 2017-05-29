@@ -1,0 +1,29 @@
+// ====================
+// * all
+// ====================
+
+//== config-settings
+@import "config/settings/_setting";
+@import "config/settings/_color";
+@import "config/settings/_fontSet";
+@import "config/settings/_easing";
+@import "config/settings/_mediaQuery";
+
+//== config-mixins
+@import "config/mixins/_ellipsis";
+@import "config/mixins/_placeholder";
+
+//== config-foundation
+@import "config/foundation/_webfonts";
+@import "config/foundation/_reset";
+@import "config/foundation/_base";
+@import "config/foundation/_noscript";
+@import "config/foundation/_ie";
+
+//== layout
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_main";
+
+//== project   ---prefix .p-
+@import "project/_svg";

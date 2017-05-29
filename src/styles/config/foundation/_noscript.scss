@@ -1,0 +1,21 @@
+// ====================
+// * _noscript
+// ====================
+
+.noscript {
+  width: 100%;
+  height: 80px;
+  &:before {
+    content: attr(data-noscript);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    background: $color-accent1;
+    z-index: 12;
+  }
+}

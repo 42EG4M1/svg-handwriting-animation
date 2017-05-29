@@ -1,0 +1,53 @@
+// ====================
+// * _ie
+// ====================
+
+.ie {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba($color-bk-base2, .95);
+  z-index: 13;
+  &__hold {
+    width: 100%;
+    max-width: 640px;
+    margin: 120px auto 0;
+    text-align: center;
+    h3 {
+      font-family: $font-family-lato;
+      font-weight: 300;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      span {
+        font-weight: 700;
+      }
+    }
+    h4 {
+      margin: 5px 0 40px;
+      font-size: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+      a {
+        border-bottom: 1px solid $color-line1-sub2;
+        transition: $transition-base;
+      }
+    }
+  }
+  &__btn {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    margin: 64px auto 0;
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid $color-line1-sub2;
+    transition: $transition-base;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background: $color-bk-main;
+    }
+  }
+}

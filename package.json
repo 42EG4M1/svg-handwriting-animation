@@ -1,0 +1,93 @@
+{
+  "name": "svg-handwriting-animation",
+  "version": "0.0.1",
+  "description": "SVG Handwriting Animation",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/42EG4M1/svg-handwriting-animation.git"
+  },
+  "author": "Tatsuya Azegami",
+  "license": "MIT",
+  "scripts": {
+    "build:sass": "node-sass src/styles/all.scss dist/styles/bundle.min.css",
+    "build:postcss": "postcss dist/styles/*.css --no-map --use autoprefixer -b \"last 2 versions\" --use csswring --output dist/styles/*.css",
+    "build:css": "npm run build:sass && npm run build:postcss",
+    "build:webpack": "webpack",
+    "build:clean": "npm run clean && mkdirp dist/styles dist/scripts",
+    "build": "npm-run-all -s build:clean -p build:css build:webpack copy",
+    "dev:sass": "node-sass src/styles/all.scss dist/styles/bundle.min.css --output-style expanded",
+    "dev:postcss": "postcss dist/styles/*.css --use autoprefixer -b \"last 2 versions\" --output dist/styles/*.css",
+    "dev:css": "npm run dev:sass && npm run dev:postcss",
+    "dev:webpack": "webpack --config webpack.config.dev.js",
+    "dev:mkdir": "mkdirp dist/styles dist/scripts",
+    "dev": "npm-run-all -s dev:mkdir -p dev:css dev:webpack copy",
+    "watch:css": "onchange \"src/styles/**/*\" -- npm run dev:css",
+    "watch:js": "onchange \"src/scripts/**/*\" -- npm run dev:webpack",
+    "watch:copy": "cpx \"src/**/*.{svg,gif,png,jpg,html}\" dist --watch",
+    "watch": "npm-run-all -p watch:css watch:js watch:copy",
+    "server": "browser-sync start --server dist --files \"./dist/**/*\"",
+    "start": "npm run dev & npm run watch & npm run server",
+    "lint": "eslint src/scripts",
+    "copy": "cpx \"src/**/*.{svg,gif,png,jpg,html}\" dist",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "browser-sync": "^2.18.8",
+    "cpx": "^1.5.0",
+    "csswring": "^5.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^3.1.1",
+    "rimraf": "^2.6.1",
+    "uglify-save-license": "^0.4.1",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "gsap": "^1.19.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "transform-runtime",
+        {
+          "helpers": false
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  }
+}

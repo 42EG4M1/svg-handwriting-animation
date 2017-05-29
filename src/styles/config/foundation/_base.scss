@@ -1,0 +1,27 @@
+// ====================
+// * _base
+// ====================
+
+// html {
+//   height: 100%; // スクロールがでない時のために入れていたがmin-height:100vhで対応
+// }
+
+body {
+  position: relative;
+  background: #333;
+  //   height: 100%; // スクロールがでない時のために入れていたがmin-height:100vhで対応
+}
+
+body.is-drawerOpen {
+  overflow: hidden;
+}
+
+.svg-defs {
+  display: none;
+}
+
+.iframe-setting {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}

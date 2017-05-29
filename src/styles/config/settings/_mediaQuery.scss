@@ -1,0 +1,30 @@
+// ====================
+// _mediaQuery
+// ====================
+
+// how to use: @media #{$mq600}
+// ChromeScrollBarWidth 15px - 1px = 14px
+
+$mq400: "screen and (max-width: 400px)";
+$mq500: "screen and (max-width: 500px)";
+$mq600: "screen and (max-width: 600px)";
+$mq700: "screen and (max-width: 700px)";
+$mq768: "screen and (max-width: 768px)";
+$mq800: "screen and (max-width: 800px)";
+$mq820: "screen and (max-width: 820px)";
+$mq900: "screen and (max-width: 900px)";
+$mq1000: "screen and (max-width: 1000px)";
+$mq1024: "screen and (max-width: 1024px)";
+$mq1100: "screen and (max-width: 1100px)";
+$mq1280: "screen and (max-width: 1280px)";
+$mq1365: "screen and (max-width: 1365px)";
+$mq1440: "screen and (max-width: 1440px)";
+$mq1730: "screen and (max-width: 1731px)";
+$mq1920: "screen and (max-width: 1920px)";
+$mq2134: "screen and (max-width: 2134px)";
+
+$mq1440min: "screen and (min-width: 1440px)";
+$mq2000min: "screen and (min-width: 2000px)";
+$mq899minh: "screen and (max-height: 899px)";
+
+$meq568maxHeight: "screen and (max-height: 568px)";// iphone5 height

@@ -1,0 +1,36 @@
+// ====================
+// * _header
+// ====================
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+  background: $color-main;
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $width-mid;
+    margin: 0 auto;
+  }
+  &__ttl {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    font-size: 24px;
+    color: $color-text-base1;
+    font-family: $font-family-mon;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}
+
+
+//== media query
+@media #{$mq800} {
+  .header {
+    &__ttl {
+      font-size: 16px;
+    }
+  }
+}

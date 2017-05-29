@@ -1,0 +1,72 @@
+// ====================
+// _color
+// ====================
+
+// 明度 ->
+// $var: lighten($color, n%);
+// $var: darken($color, n%);
+// 彩度 ->
+// $var: saturate($color, n%);
+// $var: desaturate($color, n%);
+// 透明度 ->
+// $var: transparentize($color, n);
+// $var: rgba($color, n);
+
+//== color scheme
+$_cs-main:    #242424;
+$_cs-image:   #53ABFF;
+$_cs-comple1: #B3DDFF;
+$_cs-comple2: #D9ECFF;
+$_cs-accent1: #EE6C63;
+$_cs-base1:   #ffffff;
+$_cs-base2:   #FCFBF9;
+$_cs-base3:   #F3F3F3;
+$_cs-sub1:    #989CA1;
+$_cs-sub2:    #CBD0D6;
+$_cs-link:    #688094;
+$_cs-hover:   #B3C9E0;
+$_cs-aid1:    #cccccc;
+$_cs-aid2:    #ebebeb;
+
+//= base
+$color-main: $_cs-main;
+$color-image: $_cs-image;
+$color-accent1: $_cs-accent1;
+
+//= text
+$color-text-main: $_cs-main;
+$color-text-sub1: $_cs-sub1;
+$color-text-sub2: $_cs-sub2;
+$color-text-link: $_cs-link;
+$color-text-hover: $_cs-hover;
+$color-text-base1: $_cs-base1;
+$color-text-aid1: $_cs-aid1;
+
+//= background
+$color-bk-base1: $_cs-base1;
+$color-bk-base2: $_cs-base2;
+$color-bk-base3: $_cs-base3;
+$color-bk-image: $_cs-image;
+$color-bk-main: $_cs-main;
+$color-bk-comple1: $_cs-comple1;
+$color-bk-comple2: $_cs-comple2;
+
+//= line
+$color-line1-sub2: $_cs-sub2;
+$color-line2-sub1: $_cs-sub1;
+$color-line3-main: $_cs-main;
+$color-line4-accent1: $_cs-accent1;
+$color-line5-base1: $_cs-base1;
+$color-line6-aid2: $_cs-aid2;
+
+//= sns
+$color-twitter: #55ACEE;
+$color-facebook: #3B5998;
+$color-instagram: #231F20;
+$color-googleplus: #dd4b39;
+$color-hatena: #008FDE;
+$color-line: #00c300;
+
+//= link and hover
+$color-yahoo-link: #0e1bbb;
+$color-yahoo-hover: #cc3434;

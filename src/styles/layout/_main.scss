@@ -1,0 +1,92 @@
+// ====================
+// * _main
+// ====================
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 892px;
+  height: 100vh;
+  min-height: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__inner + * {
+    margin-top: 200px;
+  }
+  &__h1 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 13px;
+    font-family: $font-family-code;
+    letter-spacing: 3px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -24px;
+      left: calc(50% - 20px);
+      width: 40px;
+      height: 1px;
+      background: #fff;
+    }
+  }
+  &__h2 {
+    order: 1;
+    margin-top: 40px;
+    color: #666;
+    font-family: $font-family-code;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+}
+
+
+//== media query
+@media #{$mq900} {
+  .main {
+    max-width: 640px;
+    &__h2 {
+      margin-top: 20px;
+    }
+    &__inner + * {
+      margin-top: 160px;
+    }
+  }
+}
+
+@media #{$mq700} {
+  .main {
+    max-width: 400px;
+    &__h1 {
+      top: 40px;
+    }
+    &__inner + * {
+      margin-top: 100px;
+    }
+  }
+}
+
+@media #{$mq400} {
+  .main {
+    max-width: 300px;
+    min-height: auto;
+    &__h1 {
+      top: 20px;
+    }
+    &__inner + * {
+      margin-top: 80px;
+    }
+  }
+}
