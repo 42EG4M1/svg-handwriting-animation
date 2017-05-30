@@ -18,6 +18,17 @@ export default class PlayHandwriting {
     this.frameArr = [];
     this.durationArr = [];
   }
+  static reset(target) {
+    target.forEach((elm) => {
+      const type = elm.tagName;
+      if (type === 'path') {
+        const e = elm;
+        const l = e.getTotalLength();
+        e.style.strokeDasharray = `${l} ${l}`;
+        e.style.strokeDashoffset = l;
+      }
+    });
+  }
   settings() {
     this.pathArr.forEach((elm, i) => {
       const length = elm.getTotalLength();

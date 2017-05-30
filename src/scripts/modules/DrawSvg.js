@@ -14,11 +14,6 @@ export default class DrawSvg {
     this.totalFrame = frame;
     this.currentFrame = 0;
     this.requestId = null;
-    this.resetSvgPath();
-  }
-  resetSvgPath() {
-    this.el.style.strokeDasharray = `${this.totalLength} ${this.totalLength}`;
-    this.el.style.strokeDashoffset = this.totalLength;
   }
   play() {
     this.draw();
