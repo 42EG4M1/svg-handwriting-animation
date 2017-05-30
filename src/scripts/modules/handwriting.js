@@ -14,7 +14,7 @@ const speed = 12;
 const interval = 0; // milli second
 const funcArr = [];
 const frameArr = [];
-let durationArr = [];
+let durationArr;
 
 const settings = () => {
   target.forEach((elm, i) => {
