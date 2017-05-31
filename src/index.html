@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="./styles/bundle.min.css" media="all">
 </head>
 
-<body>
+<body ontouchend>
 
 <div class="main">
   <h1 class="main__h1">SVG handwriting animation</h1>
@@ -43,6 +43,7 @@
       </defs>
       <image xlink:href="./images/base.svg" width="100%" height="100%" mask="url(#clipMask)"></image>
     </svg>
+    <button class="p-svg__btn" id="btn1">Replay</button>
   </section>
 
   <section class="main__inner p-svg">
@@ -144,6 +145,7 @@
         <path class="p-svg__path sw20" d="M698.6,4.6l10.5,30.1"/>
       </g>
     </svg>
+    <button class="p-svg__btn" id="btn2">Replay</button>
   </section>
 
 </div>

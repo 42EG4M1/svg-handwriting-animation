@@ -9,11 +9,10 @@
     margin-top: 200px;
   }
   &__title {
-    order: 1;
-    margin-top: 40px;
-    color: #666;
+    margin-bottom: 20px;
+    color: $color-text-sub1;
     font-family: $font-family-code;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 3px;
   }
@@ -25,29 +24,55 @@
     width: 892px;
     height: 135px;
   }
-  &__path {
-    fill: none;
-    stroke: #fff;
-    &.sw13 {
-      stroke-width: 13px;
+  &__btn {
+    order: 2;
+    width: 160px;
+    height: 40px;
+    margin: 40px auto 0;
+    color: $color-text-base1;
+    font-size: 11px;
+    font-family: $font-family-code;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: $color-bk-image;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all .5s ease;
+    &:hover {
+      background: rgba($color-bk-image, .6);
     }
-    &.sw14 {
-      stroke-width: 14px;
-    }
-    &.sw15 {
-      stroke-width: 15px;
-    }
-    &.sw16 {
-      stroke-width: 16px;
-    }
-    &.sw19 {
-      stroke-width: 19px;
-    }
-    &.sw20 {
-      stroke-width: 20px;
+    &.disabled {
+      color: $color-text-base1;
+      background: rgba($color-bk-image, .2);
+      pointer-events: none;
     }
   }
 }
+
+.p-svg__path {
+  fill: none;
+  stroke: #fff;
+  &.sw13 {
+    stroke-width: 13px;
+  }
+  &.sw14 {
+    stroke-width: 14px;
+  }
+  &.sw15 {
+    stroke-width: 15px;
+  }
+  &.sw16 {
+    stroke-width: 16px;
+  }
+  &.sw19 {
+    stroke-width: 19px;
+  }
+  &.sw20 {
+    stroke-width: 20px;
+  }
+}
+
 
 //== media query
 @media #{$mq900} {
@@ -56,7 +81,7 @@
       margin-top: 160px;
     }
     &__title {
-      margin-top: 20px;
+      margin-bottom: 20px;
     }
     &__mask {
       width: 640px;
@@ -74,6 +99,9 @@
     & + * {
       margin-top: 100px;
     }
+    &__title {
+      margin-bottom: 10px;
+    }
     &__mask {
       width: 400px;
       height: 58px;
@@ -82,13 +110,18 @@
       width: 400px;
       height: 58px;
     }
+    &__btn {
+      width: 120px;
+      height: 32px;
+      margin-top: 20px;
+    }
   }
 }
 
 @media #{$mq400} {
   .p-svg {
     & + * {
-      margin-top: 80px;
+      margin-top: 64px;
     }
     &__mask {
       width: 300px;
