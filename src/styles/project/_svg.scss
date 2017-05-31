@@ -2,70 +2,101 @@
 // * _svg
 // ====================
 
-.p-svg__mask {
-  width: 892px;
-  height: 135px;
+.p-svg {
+  display: flex;
+  flex-direction: column;
+  & + * {
+    margin-top: 200px;
+  }
+  &__title {
+    order: 1;
+    margin-top: 40px;
+    color: #666;
+    font-family: $font-family-code;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  &__mask {
+    width: 892px;
+    height: 135px;
+  }
+  &__clip {
+    width: 892px;
+    height: 135px;
+  }
+  &__path {
+    fill: none;
+    stroke: #fff;
+    &.sw13 {
+      stroke-width: 13px;
+    }
+    &.sw14 {
+      stroke-width: 14px;
+    }
+    &.sw15 {
+      stroke-width: 15px;
+    }
+    &.sw16 {
+      stroke-width: 16px;
+    }
+    &.sw19 {
+      stroke-width: 19px;
+    }
+    &.sw20 {
+      stroke-width: 20px;
+    }
+  }
 }
-
-.p-svg__clip {
-  width: 892px;
-  height: 135px;
-}
-
-.p-svg__path {
-  fill: none;
-  stroke: #fff;
-  &.sw13 {
-    stroke-width: 13px;
-  }
-  &.sw14 {
-    stroke-width: 14px;
-  }
-  &.sw15 {
-    stroke-width: 15px;
-  }
-  &.sw16 {
-    stroke-width: 16px;
-  }
-  &.sw19 {
-    stroke-width: 19px;
-  }
-  &.sw20 {
-    stroke-width: 20px;
-  }
-}
-
 
 //== media query
 @media #{$mq900} {
-  .p-svg__mask {
-    width: 640px;
-    height: 92px;
-  }
-  .p-svg__clip {
-    width: 640px;
-    height: 92px;
+  .p-svg {
+    & + * {
+      margin-top: 160px;
+    }
+    &__title {
+      margin-top: 20px;
+    }
+    &__mask {
+      width: 640px;
+      height: 92px;
+    }
+    &__clip {
+      width: 640px;
+      height: 92px;
+    }
   }
 }
 
 @media #{$mq700} {
-  .p-svg__mask {
-    width: 400px;
-    height: 58px;
-  }
-  .p-svg__clip {
-    width: 400px;
-    height: 58px;
+  .p-svg {
+    & + * {
+      margin-top: 100px;
+    }
+    &__mask {
+      width: 400px;
+      height: 58px;
+    }
+    &__clip {
+      width: 400px;
+      height: 58px;
+    }
   }
 }
 
 @media #{$mq400} {
-  .p-svg__mask {
-    width: 300px;
-    height: 44px;
-  }
-  .p-svg__clip {
-    width: 300px;
-    height: 44px;
+  .p-svg {
+    & + * {
+      margin-top: 80px;
+    }
+    &__mask {
+      width: 300px;
+      height: 44px;
+    }
+    &__clip {
+      width: 300px;
+      height: 44px;
+    }
   }
 }
