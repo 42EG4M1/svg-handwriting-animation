@@ -5,8 +5,9 @@
 .p-svg {
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
   & + * {
-    margin-top: 200px;
+    margin-top: 160px;
   }
   &__title {
     margin-bottom: 20px;
@@ -25,9 +26,8 @@
     height: 135px;
   }
   &__btn {
-    order: 2;
     width: 160px;
-    height: 40px;
+    height: 32px;
     margin: 40px auto 0;
     color: $color-text-base1;
     font-size: 11px;
@@ -82,9 +82,6 @@
 //== media query
 @media #{$mq900} {
   .p-svg {
-    & + * {
-      margin-top: 160px;
-    }
     &__title {
       margin-bottom: 20px;
     }
@@ -102,7 +99,7 @@
 @media #{$mq700} {
   .p-svg {
     & + * {
-      margin-top: 100px;
+      margin-top: 120px;
     }
     &__title {
       margin-bottom: 10px;
@@ -117,7 +114,6 @@
     }
     &__btn {
       width: 120px;
-      height: 32px;
       margin-top: 20px;
     }
   }
@@ -125,8 +121,9 @@
 
 @media #{$mq400} {
   .p-svg {
+    margin-top: 80px;
     & + * {
-      margin-top: 64px;
+      margin-top: 80px;
     }
     &__mask {
       width: 300px;
@@ -135,6 +132,10 @@
     &__clip {
       width: 300px;
       height: 44px;
+    }
+    &__btn {
+      height: 24px;
+      font-size: 10px;
     }
   }
 }

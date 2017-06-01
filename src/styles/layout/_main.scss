@@ -5,20 +5,17 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
   box-sizing: border-box;
   width: 100%;
   max-width: 892px;
-  height: 100vh;
-  min-height: 1000px;
+  min-height: 100vh;
   margin: 0 auto;
+  padding-top: 80px;
   text-align: center;
   &__h1 {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
+    height: 40px;
     margin: 0 auto;
     color: #fff;
     font-size: 13px;
@@ -27,12 +24,39 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -24px;
+      bottom: 0px;
       left: calc(50% - 20px);
       width: 40px;
       height: 1px;
       background: #fff;
     }
+  }
+}
+
+.wait {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-bk-base1;
+  animation: fadeOut .3s .7s ease forwards;
+}
+
+.fadeout {
+  animation: fadeOut .5s .5s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -56,7 +80,7 @@
 @media #{$mq400} {
   .main {
     max-width: 300px;
-    min-height: auto;
+    padding-top: 40px;
     &__h1 {
       top: 20px;
     }
