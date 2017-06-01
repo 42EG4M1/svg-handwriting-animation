@@ -9,8 +9,8 @@
 import PlayHandwriting from './modules/PlayHandwriting';
 import replay from './modules/replay';
 
-const path1 = document.querySelectorAll('#js-mask path');
-const path2 = document.querySelectorAll('#js-clip path');
+const path1 = Array.from(document.querySelectorAll('#js-mask path'));
+const path2 = Array.from(document.querySelectorAll('#js-clip path'));
 const btn1 = document.getElementById('btn1');
 const btn2 = document.getElementById('btn2');
 
