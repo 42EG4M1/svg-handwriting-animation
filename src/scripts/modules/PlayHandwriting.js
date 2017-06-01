@@ -20,13 +20,13 @@ export default class PlayHandwriting {
   }
   static reset(target) {
     target.forEach((elm) => {
-      const type = elm.tagName;
-      if (type === 'path') {
-        const e = elm;
-        const l = e.getTotalLength();
-        e.style.strokeDasharray = `${l} ${l}`;
-        e.style.strokeDashoffset = l;
-      }
+      // const type = elm.tagName;
+      // if (type === 'path') {
+      const e = elm;
+      const l = e.getTotalLength();
+      e.style.strokeDasharray = `${l} ${l}`;
+      e.style.strokeDashoffset = l;
+      // }
     });
   }
   settings() {
