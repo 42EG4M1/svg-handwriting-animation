@@ -39,6 +39,11 @@
     cursor: pointer;
     border-radius: 20px;
     transition: all .5s ease;
+    &.hidden {
+      transition: opacity .5s ease;
+      visibility: hidden;
+      opacity: 0;
+    }
     &:hover {
       background: rgba($color-bk-image, .6);
     }
