@@ -42,7 +42,7 @@ const btnShow2 = () => {
     btn2.classList.toggle('hidden');
   }, 6200);
 };
-const initPromise = Promise.resolve()
+const initPromise = () => Promise.resolve()
 .then(resetAll)
 .then(play1)
 .then(btnShow1)
