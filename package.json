@@ -15,7 +15,7 @@
     "build:css": "npm run build:sass && npm run build:postcss",
     "build:webpack": "webpack",
     "build:clean": "npm run clean && mkdirp dist/styles dist/scripts",
-    "build": "npm-run-all -s build:clean -p build:css build:webpack copy",
+    "build": "npm-run-all -s build:clean -p build:css build:webpack copy -s docs",
     "dev:sass": "node-sass src/styles/all.scss dist/styles/bundle.min.css --output-style expanded",
     "dev:postcss": "postcss dist/styles/*.css --use autoprefixer -b \"last 2 versions\" --output dist/styles/*.css",
     "dev:css": "npm run dev:sass && npm run dev:postcss",
@@ -30,6 +30,7 @@
     "start": "npm run dev & npm run watch & npm run server",
     "lint": "eslint src/scripts",
     "copy": "cpx \"src/**/*.{svg,gif,png,jpg,html}\" dist",
+    "docs": "cpx \"dist/**/*\" docs",
     "clean": "rimraf dist"
   },
   "devDependencies": {
