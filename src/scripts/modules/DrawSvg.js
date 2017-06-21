@@ -21,11 +21,11 @@ export default class DrawSvg {
   draw() {
     const progress = this.currentFrame / this.totalFrame;
     if (progress > 1) {
-      window.caf(this.requestId);
+      window.cancelAnimationFrame(this.requestId);
     } else {
       this.currentFrame += 1;
       this.el.style.strokeDashoffset = Math.floor(this.totalLength * (1 - progress));
-      this.requestId = window.raf(() => {
+      this.requestId = window.requestAnimationFrame(() => {
         this.draw();
       });
     }

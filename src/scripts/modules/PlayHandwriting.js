@@ -6,7 +6,6 @@
 
 /* eslint-disable no-console */
 
-import requestAnimFrame from './requestAnimFrame';
 import DrawSvg from './DrawSvg';
 
 export default class PlayHandwriting {
@@ -52,7 +51,6 @@ export default class PlayHandwriting {
     }
   }
   playAnimation() {
-    requestAnimFrame();
     this.timer();
     this.instanceArr.forEach((item, i) => {
       setTimeout(() => {
